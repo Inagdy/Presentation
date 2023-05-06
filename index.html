@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a636160431.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Presentation</title>
+</head>
+
+<body>
+    <!-- presentation -->
+    <section id="page1" class="page">
+        <h1>Page 1</h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi debitis possimus necessitatibus
+            aliquam illo vero. Incidunt eveniet dolores, alias excepturi libero voluptatibus ea cum. Atque nostrum
+            expedita nesciunt, corporis quis repellendus est, rem ab iure laudantium porro, nobis inventore tempora
+            magnam ratione dolore voluptates commodi quasi illo? Unde, beatae!</P>
+        <div>
+            <a href="#page2" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i>
+        </div></a>
+        </div>
+    </section>
+    <section id="page2" class="page">
+        <h1>Page 2</h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi debitis possimus necessitatibus
+            aliquam illo vero. Incidunt eveniet dolores, alias excepturi libero voluptatibus ea cum. Atque nostrum
+            expedita nesciunt, corporis quis repellendus est, rem ab iure laudantium porro, nobis inventore tempora
+            magnam ratione dolore voluptates commodi quasi illo? Unde, beatae!</P>
+        <div>
+            <a href="#page3" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i>
+            </a> <a href="#page1" class="btn">Previous Page <i class="fas fa-arrow-circle-up"></i>
+            </a>
+        </div>
+    </section>
+    <section id="page3" class="page">
+        <h1>Page 3</h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi debitis possimus necessitatibus
+            aliquam illo vero. Incidunt eveniet dolores, alias excepturi libero voluptatibus ea cum. Atque nostrum
+            expedita nesciunt, corporis quis repellendus est, rem ab iure laudantium porro, nobis inventore tempora
+            magnam ratione dolore voluptates commodi quasi illo? Unde, beatae!</P>
+        <div>
+            <a href="#page4" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i>
+            </a> <a href="#page2" class="btn">Previous Page <i class="fas fa-arrow-circle-up"></i>
+            </a>
+        </div>
+    </section>
+    <section id="page4" class="page">
+        <h1>Page 4</h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi debitis possimus necessitatibus
+            aliquam illo vero. Incidunt eveniet dolores, alias excepturi libero voluptatibus ea cum. Atque nostrum
+            expedita nesciunt, corporis quis repellendus est, rem ab iure laudantium porro, nobis inventore tempora
+            magnam ratione dolore voluptates commodi quasi illo? Unde, beatae!</P>
+        <div>
+            <a href="#page5" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i>
+            </a> <a href="#page3" class="btn">Previous Page <i class="fas fa-arrow-circle-up"></i>
+            </a>
+        </div>
+    </section>
+    <section id="page5" class="page">
+        <h1>Page 5</h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi debitis possimus necessitatibus
+            aliquam illo vero. Incidunt eveniet dolores, alias excepturi libero voluptatibus ea cum. Atque nostrum
+            expedita nesciunt, corporis quis repellendus est, rem ab iure laudantium porro, nobis inventore tempora
+            magnam ratione dolore voluptates commodi quasi illo? Unde, beatae!</P>
+        <div>
+            <a href="#page6" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i>
+            </a> <a href="#page4" class="btn">Previous Page <i class="fas fa-arrow-circle-up"></i>
+            </a>
+        </div>
+    </section>
+    <section id="page6" class="page">
+        <h1>Page 6</h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi debitis possimus necessitatibus
+            aliquam illo vero. Incidunt eveniet dolores, alias excepturi libero voluptatibus ea cum. Atque nostrum
+            expedita nesciunt, corporis quis repellendus est, rem ab iure laudantium porro, nobis inventore tempora
+            magnam ratione dolore voluptates commodi quasi illo? Unde, beatae!</P>
+        <div>
+            <a href="#page7" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i>
+            </a> <a href="#page5" class="btn">Previous Page <i class="fas fa-arrow-circle-up"></i>
+            </a>
+        </div>
+    </section>
+    <section id="page7" class="page">
+        <h1>Page 7</h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi debitis possimus necessitatibus
+            aliquam illo vero. Incidunt eveniet dolores, alias excepturi libero voluptatibus ea cum. Atque nostrum
+            expedita nesciunt, corporis quis repellendus est, rem ab iure laudantium porro, nobis inventore tempora
+            magnam ratione dolore voluptates commodi quasi illo? Unde, beatae!</P>
+        <div>
+            <a href="#page6" class="btn">Previous Page <i class="fas fa-arrow-circle-up"></i>
+            </a>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        $('.btn').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html,body').animate(
+                    {
+                        scrollTop: $(hash).offset().top
+                    },
+                    1800
+                );
+            }
+        });
+    </script>
+</body>
+
+</html>
